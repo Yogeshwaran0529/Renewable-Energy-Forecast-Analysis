@@ -1,11 +1,16 @@
 # Renewable-Energy-Forecast-Analysis
-Wind Energy Forecast Analysis
-1. Introduction
 
-Renewable energy is a critical alternative to conventional power sources, with wind energy playing a key role in sustainable electricity generation.
-This project focuses on understanding and forecasting wind-based power generation patterns using meteorological parameters such as wind speed, temperature, and humidity.
+#🌬️ Wind Energy Forecast Analysis
 
-The dataset contains hourly data on wind speed (at 10m & 100m heights), temperature, air density, and energy output (kWh) across multiple Indian locations:
+## 🧠 Project Overview
+
+This project focuses on analyzing and forecasting wind energy generation across multiple Indian locations using meteorological data.
+The goal is to understand patterns in wind speed, temperature, humidity, and their impact on energy output, and to create an interactive Excel dashboard for monitoring and decision-making.
+
+
+Tools used: MySQL, Excel
+
+Locations analyzed:
 
 Davanagere
 
@@ -17,109 +22,112 @@ Kutch
 
 Timeline: January – March 2024
 
-The project involves data cleaning, analysis, forecasting, and creation of an interactive Excel dashboard to visualize key metrics and trends.
 
-2. Objectives
+📋 Table of Contents
 
-Combine wind energy data from multiple district-level CSV files into a unified dataset using MySQL.
+Project Overview
 
-Clean and organize data including wind speed (10m & 100m), temperature, humidity, pressure, location, and energy output (kWh).
+Problem Statement
 
-Calculate additional time-based fields: month, date, and hour for temporal analysis.
+Data Source
 
-Analyze relationships between wind speed, temperature, humidity, and total energy generation.
+Data Cleaning / Preparation
 
-Forecast future wind energy production using historical patterns.
+Excel Dashboard
 
-Compare energy generation performance across multiple locations.
+Dashboard Image
 
-Design an interactive Excel dashboard to display metrics, trends, and forecasts for decision-making.
+Key Insights
 
-3. Methodology
-a) SQL Phase – Database Design, Cleaning, and Insights
+Recommendations
 
-Database Setup:
+Limitations
 
-Created wind_energy_project database and tables matching the CSV schema.
+❓ Problem Statement
 
-Data Verification:
+Wind energy is a sustainable alternative to conventional power sources. To optimize energy generation, it is crucial to understand:
 
-Checked schema and row counts to ensure proper import.
+How wind speed, temperature, and humidity influence turbine output
 
-Data Cleaning:
+Daily, hourly, and monthly energy patterns
 
-Removed duplicates by aggregating values into cleaned_table.
+Location-wise performance differences
 
-SQL Insights:
+Forecasts for future energy production
 
-Overall Energy Range: 41.64 kWh – 19,583.9 kWh
+The project aims to analyze historical patterns and predict trends to assist decision-making in wind energy management.
 
-State-wise Energy Performance: Highest: Rajasthan (4,643 kWh), Lowest: Karnataka (4,509 kWh)
+🗂️ Data Source
 
-Wind Speed Distribution (100m & 10m): Avg 11.1 m/s at 100m, Kanniyakumari highest at 11.19 m/s
+Dataset: Hourly wind energy data from four Indian districts
 
-Wind Speed vs Energy Output: Strong cubic relationship
+Timeframe: January – March 2024
 
-Temperature Impact: 6.4°C – 40.3°C; moderate temperatures improve efficiency
+Columns included:
+Location, Date, Hour, Wind_Speed_10m, Wind_Speed_100m, Temperature, Humidity, Air_Density, Energy_Output_kWh
 
-Humidity Influence: High humidity reduces output; medium humidity optimal
+🧹 Data Cleaning / Preparation
 
-Hourly Wind Patterns: Stable 00:00–06:00 hrs, peaks at 09:00–12:00 hrs
+Imported multiple CSV files into MySQL and combined into a unified dataset
 
-Daily Trends: 300k–530k kWh/day; variable weather patterns
+Removed duplicate records and verified row counts
 
-Monthly Comparison: February highest generation (4,639 kWh), March lowest (4,507 kWh)
+Standardized column names and data types
 
-b) Excel Phase – Dashboard Visualization
+Calculated additional fields: month, date, hour
 
-Line Chart: Hourly Wind Speed Pattern → Peak at 20:00 hrs
+Verified logical consistency across wind speed, temperature, and energy output
 
-Bar Chart: Temperature & Humidity vs Energy Output → Medium humidity & moderate temperature yield maximum
+📊 Excel Dashboard
 
-Pie Chart: Humidity-wise Energy Output → Medium humidity contributes highest share
+The dashboard was created in Excel to visualize trends and insights:
 
-Column Chart: Average Monthly Energy Generation → February highest
+Line Chart: Hourly wind speed pattern → Peak at 20:00 hrs
 
-Pie Chart: Month-wise Average Temperature → February 25.1°C
+Bar Chart: Temperature & humidity vs energy output → Medium humidity & moderate temperature yield maximum
 
-Line Chart: Daily Energy Generation Trend → Peaks on 10th, 13th, 21st
+Pie Chart: Humidity-wise energy contribution → Medium humidity highest
 
-Forecast Line Chart: Predicted total energy for April → steady increase
+Column Chart: Average monthly energy generation → February highest
 
-Combo Chart: Energy & Wind Speed Comparison Across Locations → Davanagere highest wind speed and output
+Forecast Line Chart: Predicted total energy for April → upward trend
 
-KPI Cards: Summary indicators like total energy, average wind speed, peak hour
+Combo Chart: Energy & wind speed comparison across locations → Davanagere highest output
 
-4. Results and Insights
-i) Overall Performance Summary
+KPI Cards: Total energy, average wind speed, peak hour indicators
+
+🖼️ Dashboard Image
+
+Below is a snapshot of the Excel dashboard:
+
+📈 Key Insights
+🔹 Overall Performance Summary
 
 Total Energy Generated: 0.32M kWh
 
 Average Wind Speed (100m): 11.79 m/s
 
-Highest Energy Generation: 15.21 kWh
-
 Peak Hour: 20:00 hrs
 
 Temperature Range: 16.6°C – 29.8°C
 
-ii) Hourly Wind Speed Pattern
+🔹 Hourly Wind Speed Pattern
 
 Stable around 11.8 m/s at 20:00 hrs → optimal for evening generation
 
-iii) Temperature & Humidity Impact
+🔹 Temperature & Humidity Impact
 
-Max energy (~1.4k kWh) occurs at 24–28°C
+Maximum energy (~1.4k kWh) occurs at 24–28°C
 
-Moderate humidity improves turbine efficiency
+Medium humidity improves turbine efficiency
 
-iv) Humidity-wise Energy Output
+🔹 Humidity-wise Energy Output
 
 Medium humidity contributes the highest average (~5.5 kWh)
 
 High or low humidity slightly reduces output
 
-v) Location-wise Comparison
+🔹 Location-wise Comparison
 
 Davanagere: Highest wind speed (12.82 m/s) & energy
 
@@ -129,38 +137,40 @@ Jaisalmer: Balanced speed-output ratio
 
 Coastal & semi-arid regions perform better due to high-altitude winds
 
-vi) Daily Energy Trend
+🔹 Daily Energy Trend
 
 Fluctuates between 0.02M – 0.04M kWh/day
 
 Peaks mid-month, dips due to natural wind variability
 
-vii) Forecasting Total Energy for April
+🔹 Forecasting for April
 
 Predicts stable upward trend
 
 Confirms reliability of turbines for near-term production
 
-viii) Temperature Overview
+💡 Recommendations
 
-February average: 25.1°C → optimal turbine operation
+Optimize turbine deployment based on high-performance locations (Davanagere & coastal regions)
 
-5. Technologies Used
+Monitor medium humidity periods to maximize energy output
 
-SQL: MySQL for database creation, cleaning, and insights
+Plan maintenance and operations around low wind periods to reduce downtime
 
-Excel: Pivot tables, conditional formatting, forecasting, interactive dashboard
+Leverage forecasting for operational planning and grid management
 
-6. Dataset
+Use dashboards for continuous monitoring to inform decisions
 
-The dataset contains hourly wind energy data for Jan–Mar 2024 across four districts in India, including:
+🚧 Limitations
 
-Wind speed (10m & 100m)
+Dataset limited to Jan–Mar 2024; seasonal variations not fully captured
 
-Temperature (°C)
+Forecasts are short-term and may vary with extreme weather conditions
 
-Humidity levels
+Other factors such as turbine maintenance, mechanical efficiency, and local topography are not included
 
-Air density
+🏁 Conclusion
 
-Energy output (kWh)
+Analysis indicates that wind speed, temperature, and humidity significantly influence energy output.
+Medium humidity and moderate temperatures yield maximum efficiency, while location and wind patterns are critical for strategic turbine placement.
+Forecasting confirms reliable near-term energy production, aiding planning and optimization in wind energy operations.
