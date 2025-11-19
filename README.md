@@ -88,8 +88,15 @@ The project aims to **analyze historical patterns and predict trends** to assist
 
 Below is the visual dashboard created in Excel:
 
-![Wind Energy Dashboard](wind_energy_dashboard.png)  
+![Wind Energy Dashboard](Wind_Energy_Analysis_Dashboard.png)  
 
+---
+
+
+## 📊 Live Dashboard
+
+**Excel Dashboard (View Online):**  
+[Click here](https://1drv.ms/x/c/e493825a3532b2c6/IQAQhNwF4DCYRbrSr3jJT5ucAe-9j--ex-rsrftVx4gtEcU?e=TjEIfy)
 ---
 
 ## 📈 Key Insights
