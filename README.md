@@ -1,4 +1,4 @@
-# Renewable-Energy-Forecast-Analysis  ug
+# Renewable-Energy-Forecast-Analysis
 
 # 🌬️ Wind Energy Forecast Analysis
 
